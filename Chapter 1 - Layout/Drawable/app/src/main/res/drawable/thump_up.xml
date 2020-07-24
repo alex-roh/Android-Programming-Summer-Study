@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 특정 상태일 때 다른 이미지를 보여줌 -->
+    <item
+        android:state_pressed="true"
+        android:drawable="@drawable/ic_thumb_up_selected"
+        ></item>
+    <!-- 이미지를 가져와서 읽음-->
+    <item
+        android:drawable="@drawable/ic_thumb_up"
+        ></item>
+
+</selector>
