@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- xlmns:app은 안드로이드 API가 아니라 앱에서 정의한 속성(외부 라이브러리 포함)을 사용하겠다는 것-->
+    <item
+        android:title="새로고침"
+        android:id="@+id/menu_refresh"
+        android:icon="@drawable/menu_refresh"
+        app:showAsAction="always"
+        />
+    <!-- showAsAction = always : 메뉴 아이템이 계속 보이게 해달라는 것-->
+    <item
+        android:id="@+id/menu_search"
+        android:title="검색"
+        android:icon="@drawable/menu_search"
+        app:showAsAction="always|withText"
+        app:actionLayout="@layout/search_layout"
+        />
+    <item
+        android:id="@+id/menu_settings"
+        android:title="설정"
+        android:icon="@drawable/menu_settings"
+        app:showAsAction="always"
+        />
+</menu>

@@ -25,6 +25,7 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
+        // 전달된 인텐트를 확인함
         Intent passedIntent = getIntent();
         processIntent(passedIntent);
 
@@ -32,9 +33,12 @@ public class MenuActivity extends AppCompatActivity {
 
     private void processIntent(Intent intent){
         if(intent != null){
-            // ArrayList는 Serializable 인터페이스를 구현하고 있으므로 아래 메서드로 뺄 수 있음
+            // ArrayList는 Serializable 인터페이스를 구현하고 있으므로 getSerializableExtra로 뺄 수 있음
+            // Parcelable을 사용하기 귀찮을 때 이렇게 사용하지만 전달되는 데이터의 용량이 큼
             ArrayList<String> names = (ArrayList<String>) intent.getSerializableExtra("names");
             if(names != null){
+                Toast.makeText(getApplicationContext(), "전달받은 이름 리스트 갯수: " + names.size(), Toast.LENGTH_SHORT).show();
+
             }
         }
     }
